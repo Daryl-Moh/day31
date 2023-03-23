@@ -1,19 +1,45 @@
-<app-count [startNum]="3" (valueChanged)="newValue($event)"></app-count>
-<app-count [startNum]="num"></app-count>
+<h1>Day 31 Lesson</h1>
 
-<app-numlist [numImage]="pics"></app-numlist>
-<app-numlist></app-numlist>
+<div class="box-it">
+  
+  <h3> Hello World from App-Root </h3>
 
-<!--
+  <h4>Message directly overwritten in app-hello call:</h4>
+  <app-hello message="meow meow"></app-hello>
+  <h4>Message as written in app-hello:</h4>
+  <app-hello></app-hello>
+  <h4>Message called from app.component.ts:</h4>
+  <app-hello message="{{title}}"></app-hello>
+  <br>
+  <div>
+    Text: <input type="text" [placeholder]="title">
+    <button type="button" (click)="toggleInput()">Toggle Input Button</button>
+  </div>
 
-<h1> Hello World from App-Root </h1>
-
-<app-hello message="meow meow"></app-hello>
-<app-hello message="{{title}}"></app-hello>
-
-<div>
-  Text: <input type="text" [placeholder]="title">
-  <button type="button" (click)="toggleInput()">Toggle Input Button</button>
 </div>
 
--->
+<div class="box-it">
+  <h4>1st app-count value will affect 2nd app-count display</h4>
+  <table>
+    <tr>
+      <td>
+        <app-count [startNum]="3" (valueChanged)="newValue($event)"></app-count>
+      </td>
+      <td>
+        <app-count [startNum]="num"></app-count>
+      </td>
+  </table>
+</div>
+
+<div class="box-it">
+  <app-numlist [numImage]="pics"></app-numlist>
+</div>
+
+<div class="box-it">
+  <h4>Calling numlist component while passing array of picNum from component.ts </h4>
+  <app-numlist></app-numlist>
+</div>
+
+
+
+
