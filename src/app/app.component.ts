@@ -20,7 +20,7 @@ export class AppComponent {
 
   toggleInput() {
     console.info('button clicked')
-    this.disabled = this.disabled
+    this.disabled = !this.disabled
   }
 
   newValue(value: number) {

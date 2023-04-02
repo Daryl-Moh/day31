@@ -12,8 +12,8 @@
   <app-hello message="{{title}}"></app-hello>
   <br>
   <div>
-    Text: <input type="text" [placeholder]="title">
-    <button type="button" (click)="toggleInput()">Toggle Input Button</button>
+    Text: <input type="text" [placeholder]="title" [disabled]="disabled">
+    <button type="button" (click)="toggleInput()" >Toggle Input Box</button>
   </div>
 
 </div>
